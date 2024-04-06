@@ -8,7 +8,7 @@ Routes?
 
 voting app functionality
 
-1. user sign in / sign up
+1. user sign in / sign up 
 2. see the list of candidate
 3. vote one of the candidate
 4. there is a route which shows the list of candidates and their live vote counts sorted by their vote count 
@@ -16,3 +16,27 @@ voting app functionality
 6. there should be one admin who can maintain the table of candidate and he can't able to vote
 7. user can change thir password
 8. user can login only with aadhar card and password
+
+
+--------------------------
+Routes
+
+User Authentication
+ /signup: POST - Create a new user account.
+ /login: POST - Login in to an existing account [Aadhar Card, Password]
+
+ Voting:
+ /candidates: GET - Get the list of candidates.
+ /vote/:candidateId: POST - Vote for a speciafic candidate
+
+ Vote Counts: 
+ /vote/counts: GET - Get the user's profile information
+
+ User Profile: 
+ /profile: GET - Get the user's profile information.
+ /profile/password: PUT - Chnage the user's password.
+
+ Admin Candidate Management:
+ /candidates: POST - Create a new candidate.
+ /candidate/:candidateID: PUT - Update an existing candidate
+ /candidate/:candidateID: DELETE - Delete a candidate from the list
